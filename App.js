@@ -7,6 +7,8 @@ import { createStore, applyMiddleware } from "redux";
 import { Provider } from "react-redux";
 import thunk from "redux-thunk";
 import rootReducer from "./stores/rootReducer";
+import { LogBox } from "react-native";
+LogBox.ignoreLogs(["Reanimated 2"]);
 
 const store = createStore(rootReducer, applyMiddleware(thunk));
 
